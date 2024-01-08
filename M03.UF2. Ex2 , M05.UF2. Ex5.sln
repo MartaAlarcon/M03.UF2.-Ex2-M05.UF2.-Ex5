@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M03.UF2. Ex2 , M05.UF2. Ex5", "M03.UF2. Ex2 , M05.UF2. Ex5\M03.UF2. Ex2 , M05.UF2. Ex5.csproj", "{BD25D173-0A66-4578-9081-1B05A1948C8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidarSenarLibreria", "ValidarSenarLibreria\ValidarSenarLibreria.csproj", "{C152F79C-CD0C-45E3-9E35-9BA62A9EA29B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD25D173-0A66-4578-9081-1B05A1948C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD25D173-0A66-4578-9081-1B05A1948C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD25D173-0A66-4578-9081-1B05A1948C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C152F79C-CD0C-45E3-9E35-9BA62A9EA29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C152F79C-CD0C-45E3-9E35-9BA62A9EA29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C152F79C-CD0C-45E3-9E35-9BA62A9EA29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C152F79C-CD0C-45E3-9E35-9BA62A9EA29B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

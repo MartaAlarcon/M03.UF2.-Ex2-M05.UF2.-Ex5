@@ -1,5 +1,8 @@
 ﻿using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
+
+using ValidarSenarLibreria;
+
 namespace Programa
 {
     public class ejPrograma
@@ -8,7 +11,9 @@ namespace Programa
         {
             const string MsgWelcome = "Escull una opció: a. Validar si un nombre és senar\r\nb. Calcular la potència d'un nombre\r\nc. Retornar un valor aleatori\r\nd. Comptar el nombre de vocals o consonants en un text\r\ne. Sortir";
             char menu;
+
             int number, exponent;
+
             Console.WriteLine(MsgWelcome);
             menu = Convert.ToChar(Console.ReadLine());
             menu = char.ToLower(menu);
@@ -18,7 +23,9 @@ namespace Programa
                     Console.WriteLine("Introdueix un nombre per comprobar si és senar: ");
                     number = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine(ValidarSenar(number));
+
                     break;
+
                 case 'b':
                     Console.WriteLine("Introdueix un nombre per la base i després un per l'exponent: ");
                     number = Convert.ToInt32(Console.ReadLine());
@@ -54,6 +61,21 @@ namespace Programa
                 return result;
             }
 
+
+        }
+        static bool ValidarSenar(int number)
+        {
+            if (number / 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
         }
     }
+    
 }
