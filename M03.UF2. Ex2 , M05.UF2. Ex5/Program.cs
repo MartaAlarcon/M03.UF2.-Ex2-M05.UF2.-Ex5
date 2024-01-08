@@ -1,6 +1,6 @@
 ﻿using System;
-
-
+using System.Diagnostics;
+using System.Linq;
 using ValidarSenarLibreria;
 
 namespace Programa
@@ -11,7 +11,7 @@ namespace Programa
         {
             const string MsgWelcome = "Escull una opció:\r\n a. Validar si un nombre és senar\r\nb. Calcular la potència d'un nombre\r\nc. Retornar un valor aleatori\r\nd. Comptar el nombre de vocals o consonants en un text\r\ne. Sortir";
             char menu;
-
+            string text;
             int number, exponent;
             Random rand = new Random();
 
@@ -37,6 +37,9 @@ namespace Programa
                     Console.WriteLine(RetornarAleatori(rand));
                     break;
                 case 'd':
+                    Console.WriteLine("Escriu un text: ");
+                    text = Console.ReadLine(); 
+                    Console.WriteLine(ContarLletres(text));
                     break;
                 case 'e':
                     Console.WriteLine("GRACIAS");
@@ -73,10 +76,29 @@ namespace Programa
                 return rand.Next(numberOne, numberTwo);
 
             }
-
+            static int ContarLletres(string text)
+            {
+                text = text.Trim();
+                int vowel = 0, consonant = 0;
+                for (int i = 0;i < text.Length; i++)
+                {
+                    text = text.Substring(i);
+                    if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u')
+                    {
+                        vowel++;
+                        return vowel;
+                    }
+                    else
+                    {
+                        consonant++;
+                        return consonant;
+                    }
+                }
+                return 0;
+               
+               
+            }
         }
-       
-
         }
     }
     
