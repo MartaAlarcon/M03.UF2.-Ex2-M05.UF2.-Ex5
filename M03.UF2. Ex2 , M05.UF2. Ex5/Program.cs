@@ -9,10 +9,11 @@ namespace Programa
     {
         public static void Main()
         {
-            const string MsgWelcome = "Escull una opció: a. Validar si un nombre és senar\r\nb. Calcular la potència d'un nombre\r\nc. Retornar un valor aleatori\r\nd. Comptar el nombre de vocals o consonants en un text\r\ne. Sortir";
+            const string MsgWelcome = "Escull una opció:\r\n a. Validar si un nombre és senar\r\nb. Calcular la potència d'un nombre\r\nc. Retornar un valor aleatori\r\nd. Comptar el nombre de vocals o consonants en un text\r\ne. Sortir";
             char menu;
 
             int number, exponent;
+            Random rand = new Random();
 
             Console.WriteLine(MsgWelcome);
             menu = Convert.ToChar(Console.ReadLine());
@@ -33,6 +34,7 @@ namespace Programa
                     Console.WriteLine(CalcularPotencia(number, exponent));
                     break;
                 case 'c':
+                    Console.WriteLine(RetornarAleatori(rand));
                     break;
                 case 'd':
                     break;
@@ -61,22 +63,20 @@ namespace Programa
                 }
                 return result;
             }
+            static int RetornarAleatori(Random rand)
+            {
+                int numberOne, numberTwo;
+                Console.WriteLine("Escriu el primer nombre: ");
+                numberOne = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Escriu el segon nombre: ");
+                numberTwo = Convert.ToInt32(Console.ReadLine());
+                return rand.Next(numberOne, numberTwo);
 
+            }
 
         }
-        static bool ValidarSenar(int number)
-        {
-            if (number / 2 == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
+       
 
         }
     }
     
-}
