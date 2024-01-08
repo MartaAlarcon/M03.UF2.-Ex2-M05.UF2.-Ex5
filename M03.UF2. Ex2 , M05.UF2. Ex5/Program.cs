@@ -37,6 +37,7 @@ namespace Programa
                 case 'd':
                     break;
                 case 'e':
+                    Console.WriteLine("GRACIAS");
                     break;
 
             }
